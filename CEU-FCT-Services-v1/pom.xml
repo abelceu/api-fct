@@ -5,14 +5,29 @@
 	<groupId>ceu.dam</groupId>
 	<artifactId>CEU-FCT-Services-v1</artifactId>
 	<version>1.0.0</version>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
   <build>
+   <sourceDirectory>./src</sourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+            <mainClass>ceu.dam.fct.App</mainClass>
+            <layout>JAR</layout>
+        </configuration>		
       </plugin>
     </plugins>
   </build>
+  <properties>
+    <start-class>ceu.dam.fct.App</start-class>
+	<java.version>17</java.version>
+   </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.mariadb.jdbc</groupId>
