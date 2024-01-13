@@ -8,10 +8,10 @@ public class OpenConnection {
 
 	
 	public Connection abrirConexion() throws SQLException {
-		String url = "jdbc:mariadb://localhost:3306/ceu-fct";
+		String url = "jdbc:mariadb://mysql.railway.internal:3306/railway";
 		String driver = "org.mariadb.jdbc.Driver";
-		String user = "ceu-fct";
-		String pass = "ceu-fct";
+		String user = "ceufct";
+		String pass = "ceufct";
 		
 		try {
 			Class.forName(driver);
