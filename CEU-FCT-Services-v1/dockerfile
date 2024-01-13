@@ -1,0 +1,3 @@
+FROM openjdk:13-jdk-alpine
+COPY target/CEU-FCT-Services-v1-1.0.0.jar ceu-fct-services.jar
+ENTRYPOINT ["java", "-jar", "ceu-fct-services.jar"]
