@@ -43,7 +43,8 @@ public class UsuariosService {
 			}
 			return usuario;
 		} catch (SQLException e) {
-			System.err.println("Error al consultar usuarios");
+			System.err.println("Error al consultar usuario para el login");
+			e.printStackTrace();
 			throw new CeuFctException("Error al consultar usuarios en BBDD", e);
 		} finally {
 			try {
